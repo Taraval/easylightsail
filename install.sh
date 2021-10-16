@@ -1,5 +1,8 @@
 #!/bin/bash
 
+export DEBIAN_FRONTEND=noninteractive
+export DEBIAN_PRIORITY=critical
+
 # Generate swap space.
 sudo fallocate -l 2.5G /swapfile
 sudo chmod 600 /swapfile
