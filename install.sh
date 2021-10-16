@@ -11,7 +11,7 @@ sudo swapon /swapfile
 
 # Update repo and get tools
 sudo apt-get update
-sudo apt-get install curl wget tmux vim -y 
+sudo apt-get --yes --force-yes -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" install curl wget tmux vim -y 
 curl https://get.docker.com/ | sh
 sudo usermod -aG docker $USER
 
